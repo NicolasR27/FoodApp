@@ -23,9 +23,13 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             Form {
-                Text("Order Awesome Burger")
-                    .font(.title)
-                Text("is the Best Burger There!")
+                
+                VStack(alignment:.leading,spacing: 8){
+                    Text("Order awesome burger")
+                        .font(.title)
+                    Text("is the best burger there is!")
+                }
+                
                 
                 // Quanity
                 Section(header:Text("Quantity")){
@@ -38,56 +42,56 @@ struct ContentView: View {
                     Picker(selection: $bun, label: Text("Bun")) {
                         ForEach(bunTypes,id: \.self) { (bun) in
                             Text(bun)
-                          }
-                        }  
-                        
-                       Picker(selection: $cheese, label: Text("cheese")) {
-                            ForEach(bunTypes,id: \.self) { (cheese) in
-                                Text(cheese)
-                                
-                            }
-                            
-                            
-                            
                         }
-                        
-                        
-                        Picker(selection: $protein, label: Text("protein")) {
-                            ForEach(bunTypes,id: \.self) { (protein) in
-                                Text(protein)
-                                
-                            }
-                            
-                            
-                            
-                        }
-                        
-                        
-                        
-                        
-                    }
-                    Section(header:Text("Special Instructions")) {
-                        TextField("special instructions",text:$specialInstructions)
                     }
                     
-                    Button(action: submitOrder) {
-                        Text("submit Order")
+                    Picker(selection: $cheese, label: Text("cheese")) {
+                        ForEach(bunTypes,id: \.self) { (cheese) in
+                            Text(cheese)
+                            
+                        }
+                        
+                        
                         
                     }
+                    
+                    
+                    Picker(selection: $protein, label: Text("Protein")) {
+                        ForEach(proteinTypes,id: \.self) { (protein) in
+                            Text(protein)
+                            
+                        }
+                        
+                        
+                        
+                    }
+                    
+                    
+                    
+                    
+                }
+                Section(header:Text("Special Instructions")) {
+                    TextField("special instructions",text:$specialInstructions)
                 }
                 
+                Button(action: SubmitOrder) {
+                    Text("submit Order")
+                    
+                }
             }
             
         }
         
-              func submitOrder() {
-                //do something
-            }
-        }
-        
-        struct ContentView_Previews: PreviewProvider {
-            static var previews: some View {
-                ContentView()
-            }
-        }
+    }
     
+    func SubmitOrder() {
+        //do something
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
