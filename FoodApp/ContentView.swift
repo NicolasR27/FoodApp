@@ -38,7 +38,7 @@ struct ContentView: View {
                     }
                 }
                 
-                Section(header:Text("options")){
+                Section(header:Text("Options")){
                     Picker(selection: $bun, label: Text("Bun")) {
                         ForEach(bunTypes,id: \.self) { (bun) in
                             Text(bun)
@@ -46,7 +46,7 @@ struct ContentView: View {
                     }
                     
                     Picker(selection: $cheese, label: Text("cheese")) {
-                        ForEach(bunTypes,id: \.self) { (cheese) in
+                        ForEach(cheeseTypes,id: \.self) { (cheese) in
                             Text(cheese)
                             
                         }
@@ -78,6 +78,9 @@ struct ContentView: View {
                     Text("submit Order")
                     
                 }
+                
+              
+                
             }
             
         }
@@ -86,6 +89,7 @@ struct ContentView: View {
     
     func SubmitOrder() {
         //do something
+        
     }
 }
 
