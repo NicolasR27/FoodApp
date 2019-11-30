@@ -11,12 +11,12 @@ import SwiftUI
 struct ContentView: View {
     
     let bunTypes: [String] = ["Patato roll", "SwissBun","SourDough"]
-    let cheeseTypes = ["American","PerperJack","Swiss"]
+    let cheeseTypes = ["American","PeperJack","Swiss"]
     let proteinTypes = ["Beef","Chicken","Veggie"]
     
     @State var quantity: Int = 0
     @State var bun: String = ""
-    @State var cheese:String = ""
+    @State var Cheese:String = ""
     @State var protein:String = ""
     @State var specialInstructions: String = ""
     
@@ -45,7 +45,7 @@ struct ContentView: View {
                         }
                     }
                     
-                    Picker(selection: $cheese, label: Text("cheese")) {
+                    Picker(selection: $Cheese, label: Text("cheese")) {
                         ForEach(cheeseTypes,id: \.self) { (cheese) in
                             Text(cheese)
                             
