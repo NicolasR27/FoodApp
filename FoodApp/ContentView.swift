@@ -14,6 +14,7 @@ struct ContentView: View {
     let cheeseTypes = ["American","PeperJack","Swiss"]
     let proteinTypes = ["Beef","Chicken","Veggie"]
     
+    
     @State var quantity: Int = 0
     @State var bun: String = ""
     @State var Cheese:String = ""
@@ -26,8 +27,10 @@ struct ContentView: View {
                 
                 VStack(alignment:.leading,spacing: 8){
                     Text("Order awesome burger")
+                        .foregroundColor(.purple)
                         .font(.title)
                     Text("is the best burger there is!")
+                     .foregroundColor(.purple)
                 }
                 
                 
@@ -35,6 +38,8 @@ struct ContentView: View {
                 Section(header:Text("Quantity")){
                     Stepper(value: $quantity){
                         Text(quantity.description)
+                        .foregroundColor(.green)
+                        
                     }
                 }
                 
@@ -42,12 +47,14 @@ struct ContentView: View {
                     Picker(selection: $bun, label: Text("Bun")) {
                         ForEach(bunTypes,id: \.self) { (bun) in
                             Text(bun)
+                            .foregroundColor(.pink)
                         }
                     }
                     
                     Picker(selection: $Cheese, label: Text("cheese")) {
                         ForEach(cheeseTypes,id: \.self) { (cheese) in
                             Text(cheese)
+                            .foregroundColor(.orange)
                             
                         }
                         
@@ -59,6 +66,8 @@ struct ContentView: View {
                     Picker(selection: $protein, label: Text("Protein")) {
                         ForEach(proteinTypes,id: \.self) { (protein) in
                             Text(protein)
+                            .foregroundColor(.yellow)
+                            
                             
                         }
                         
@@ -72,10 +81,12 @@ struct ContentView: View {
                 }
                 Section(header:Text("Special Instructions")) {
                     TextField("special instructions",text:$specialInstructions)
+                    .foregroundColor(.blue)
                 }
                 
                 Button(action: SubmitOrder) {
                     Text("submit Order")
+                     .foregroundColor(.pink)
                     
                 }
                 
@@ -88,6 +99,7 @@ struct ContentView: View {
     }
     
     func SubmitOrder() {
+         
         //do something
         
     }
