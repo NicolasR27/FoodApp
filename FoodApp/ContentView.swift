@@ -51,7 +51,7 @@ struct ContentView: View {
                         }
                     }
                     
-                    Picker(selection: $Cheese, label: Text("cheese")) {
+                    Picker(selection: $Cheese, label: Text("Cheese")) {
                         ForEach(cheeseTypes,id: \.self) { (cheese) in
                             Text(cheese)
                             .foregroundColor(.orange)
@@ -85,7 +85,7 @@ struct ContentView: View {
                 }
                 
                 Button(action: SubmitOrder) {
-                    Text("submit Order")
+                    Text("Submit Order")
                      .foregroundColor(.pink)
                     
                 }
