@@ -1,10 +1,4 @@
-//
-//  SceneDelegate.swift
-//  FoodApp
-//
-//  Created by Nicolas Rios on 11/28/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
-//
+
 
 import UIKit
 import SwiftUI

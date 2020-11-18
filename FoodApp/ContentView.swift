@@ -1,10 +1,4 @@
-//
-//  ContentView.swift
-//  FoodApp
-//
-//  Created by Nicolas Rios on 11/28/19.
-//  Copyright © 2019 Nicolas Rios. All rights reserved.
-//
+
 
 import SwiftUI
 
@@ -26,11 +20,11 @@ struct ContentView: View {
             Form {
                 
                 VStack(alignment:.leading,spacing: 8){
-                    Text("Order awesome burger")
-                        .foregroundColor(.purple)
+                    Text("Awesome burger")
+                        .foregroundColor(.gray)
                         .font(.title)
-                    Text("is the best burger there is!")
-                     .foregroundColor(.purple)
+     //               Text("is the best burger there is!")
+                     .foregroundColor(.gray)
                 }
                 
                 
@@ -38,7 +32,7 @@ struct ContentView: View {
                 Section(header:Text("Quantity")){
                     Stepper(value: $quantity){
                         Text(quantity.description)
-                        .foregroundColor(.green)
+                        .foregroundColor(.gray)
                         
                     }
                 }
@@ -86,7 +80,7 @@ struct ContentView: View {
                 
                 Button(action: SubmitOrder) {
                     Text("Submit Order")
-                     .foregroundColor(.pink)
+                     .foregroundColor(.gray)
                     
                 }
                 
