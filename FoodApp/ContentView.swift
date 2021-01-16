@@ -23,8 +23,7 @@ struct ContentView: View {
                     Text("Awesome burger")
                         .foregroundColor(.gray)
                         .font(.title)
-     //               Text("is the best burger there is!")
-                     .foregroundColor(.gray)
+                        .foregroundColor(.gray)
                 }
                 
                 
